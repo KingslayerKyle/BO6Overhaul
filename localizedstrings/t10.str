@@ -1,0 +1,70 @@
+REFERENCE            AMMO_CRATE
+LANG_ENGLISH         "Hold ^3[{+activate}]^7 for Ammo [Cost: &&1]"
+
+REFERENCE            AMMO_CRATE_INVALID
+LANG_ENGLISH         "This weapon is incompatible"
+
+REFERENCE            ARMOR_CHALK_BUY
+LANG_ENGLISH         "Hold ^3[{+activate}]^7 for Level &&1 Armor Vest [Cost: &&2]"
+
+REFERENCE            ARMOR_CHALK_OWNED
+LANG_ENGLISH         "Hold ^3[{+activate}]^7 to Repair Armor Vest [Cost: &&2]\n(You already have Level &&1 Armor Vest)"
+
+REFERENCE            BUYABLE_PERK
+LANG_ENGLISH         "Hold ^3[{+activate}]^7 to purchase a variety of Perks"
+
+REFERENCE            PACK_A_PUNCH
+LANG_ENGLISH         "Hold ^3[{+activate}]^7 for Level &&1 Pack-a-Punch [Cost: &&2]"
+
+REFERENCE            PACK_A_PUNCH_MAX_LEVEL
+LANG_ENGLISH         "You already have Level 3 Pack-a-Punch"
+
+REFERENCE            PACK_A_PUNCH_IN_USE
+LANG_ENGLISH         "The Pack-a-Punch is already in use"
+
+REFERENCE            WEAPON_UPGRADE
+LANG_ENGLISH         "Hold ^3[{+activate}]^7 to use The Arsenal"
+
+REFERENCE            ITEM_DROPS_AMMO
+LANG_ENGLISH         "Ammo"
+
+REFERENCE            ITEM_DROPS_AMMO_PICK_UP
+LANG_ENGLISH         "Hold ^3[{+activate}]^7 for Ammo"
+
+REFERENCE            ITEM_DROPS_ARMOR_PLATE
+LANG_ENGLISH         "Armor Plate"
+
+REFERENCE            ITEM_DROPS_ARMOR_PLATE_PICK_UP
+LANG_ENGLISH         "Hold ^3[{+activate}]^7 for Armor Plate"
+
+REFERENCE            ITEM_DROPS_SALVAGE
+LANG_ENGLISH         "Salvage"
+
+REFERENCE            ITEM_DROPS_SALVAGE_PICK_UP
+LANG_ENGLISH         "Hold ^3[{+activate}]^7 for Salvage"
+
+REFERENCE            UI_SCORE_EVENT_ELIMINATION
+LANG_ENGLISH         "Zombie Elimination"
+
+REFERENCE            UI_SCORE_EVENT_CRITICAL_KILL
+LANG_ENGLISH         "Zombie Critical Kill"
+
+REFERENCE            UI_SCORE_EVENT_MELEE_KILL
+LANG_ENGLISH         "Zombie Melee Kill"
+
+REFERENCE            UI_SCORE_EVENT_BURNED_KILL
+LANG_ENGLISH         "Zombie Burned Kill"
+
+REFERENCE            UI_POWERUP_EVENT_CARPENTER
+LANG_ENGLISH         "CARPENTER!"
+
+REFERENCE            UI_POWERUP_EVENT_FREE_PERK
+LANG_ENGLISH         "FREE PERK!"
+
+REFERENCE            UI_POWERUP_EVENT_NUKE
+LANG_ENGLISH         "NUKE!"
+
+REFERENCE            UI_POWERUP_EVENT_BONUS_POINTS
+LANG_ENGLISH         "BONUS POINTS!"
+
+ENDMARKER
