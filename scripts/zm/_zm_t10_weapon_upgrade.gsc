@@ -291,6 +291,12 @@ function weapon_upgrade_menu_handler()
 		// Wait for the menu response
 		self waittill( "menuresponse", menu, response );
 
+		// Make sure it's the correct menu
+		if( !IS_EQUAL( menu, "T10WeaponUpgrade_Main" ) )
+		{
+			continue;
+		}
+
 		// Get the machine stub
 		machine_stub = arraygetclosest( self.origin, level.t10_weapon_upgrade_machines );
 
@@ -300,16 +306,16 @@ function weapon_upgrade_menu_handler()
 			continue;
 		}
 
-		// Make sure it's the correct menu
-		if( !IS_EQUAL( menu, "T10WeaponUpgrade_Main" ) )
-		{
-			continue;
-		}
-
 		// Close the menu if we send the close string
 		if( IS_EQUAL( response, "close" ) )
 		{
 			self weapon_upgrade_close_menu( machine_stub );
+			continue;
+		}
+
+		// Make sure it's a valid response
+		if( !issubstr( response, "|" ) )
+		{
 			continue;
 		}
 

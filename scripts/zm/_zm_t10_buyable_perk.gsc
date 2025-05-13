@@ -180,6 +180,12 @@ function buyable_perk_menu_handler()
 		// Wait for the menu response
 		self waittill( "menuresponse", menu, response );
 
+		// Make sure it's the correct menu
+		if( !IS_EQUAL( menu, "T10BuyablePerk_Main" ) )
+		{
+			continue;
+		}
+
 		// Get the machine stub
 		machine_stub = arraygetclosest( self.origin, level.t10_buyable_perk_machines );
 
@@ -189,16 +195,16 @@ function buyable_perk_menu_handler()
 			continue;
 		}
 
-		// Make sure it's the correct menu
-		if( !IS_EQUAL( menu, "T10BuyablePerk_Main" ) )
-		{
-			continue;
-		}
-
 		// Close the menu if we send the close string
 		if( IS_EQUAL( response, "close" ) )
 		{
 			self buyable_perk_close_menu();
+			continue;
+		}
+
+		// Make sure it's a valid response
+		if( !issubstr( response, "," ) )
+		{
 			continue;
 		}
 
