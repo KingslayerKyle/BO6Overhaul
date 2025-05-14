@@ -214,7 +214,7 @@ function buyable_perk_menu_handler()
 		perk = STR( split_string[1] );
 
 		// Limit quick revive in solo
-		if( level flag::exists( "solo_game" ) && level flag::exists( "solo_revive" ) && level flag::get( "solo_game" ) && level flag::get( "solo_revive" ) )
+		if( IS_EQUAL( perk, PERK_QUICK_REVIVE ) && level flag::exists( "solo_game" ) && level flag::exists( "solo_revive" ) && level flag::get( "solo_game" ) && level flag::get( "solo_revive" ) )
 		{
 			self playsound( "zmb_no_cha_ching" );
 			self zm_audio::create_and_play_dialog( "general", "sigh" );
