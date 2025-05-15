@@ -8,6 +8,7 @@
 - Recreated core BO6 systems in BO3 through custom GSC scripting and Lua UI work, closely replicating visuals, functionality, and behavior.
 - Created a font exporter to obtain the fonts used in the UI.
 - Created the [BO6 Tools Maya Plugin](https://github.com/KingslayerKyle/BO6ToolsMayaPlugin) (for vertex color material mapping)
+- Gathered feedback from testers and implemented additional suggestions and bug fixes.
 
 ## ❤ Support & Acknowledgement Request
 
@@ -95,7 +96,7 @@ Save and exit.
 
 ---
 
-# Additional Notes
+## 📝 Additional Notes
 
 ### Map Name & Description:
 
@@ -127,7 +128,22 @@ Before you start, make sure both Electric Cherry and Widow's Wine are turned on 
 
 These perks are set to show up in the menu by default. If a perk is in the menu but not in your map, you'll get an error. If you don't want to use one or both of these perks, remove them instead (this will require some basic understanding of the lua files)
 
-**Wunderfizz includes a perk bump script.** To enable it, add the following to your map's `.gsc` file **after** the `zm_usermap::main();` line:
+---
+
+### Perk change script:
+
+**The Wunderfizz machine and all stock perk machines include perk change support.**
+To enable this functionality, you must manually activate it by calling the perk change script. If you haven’t already done so, complete the steps below.
+
+**Note:** The order of the #using statements does not affect functionality. They are simply organized into sections (e.g., shared scripts, zombies mode scripts) for better readability and maintainability. You can add the required #using anywhere in the list, regardless of its position—just place it in the section that makes the most sense for your organization.
+
+To enable it, add the following to the top of your map's `.gsc` file:
+
+```c
+#using scripts\zm\_zm_perks;
+```
+
+Then add the following to your map's `.gsc` file **after** the `zm_usermap::main();` line:
 
 ```c
 level thread zm_perks::spare_change();
@@ -155,7 +171,7 @@ Wunderfizz will play random jingles if your **perk jingle aliases** are set up c
 
 ---
 
-### Pack-a-Punch Camos:
+### Configurable settings:
 
 You can toggle hitmarkers and change Pack-a-Punch camos for **each tier** in the `_zm_t10_weapon_upgrade.gsh` file.
 
