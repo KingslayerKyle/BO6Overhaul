@@ -117,6 +117,20 @@ CoD.UsermapDesc = "Replace with your maps description"
 
 ---
 
+### Inventory Widget
+
+There is a pre-made inventory widget included that can be enabled in:
+
+```
+ui/uieditor/menus/hud/T10Hud_zm_factory.lua
+```
+
+Line **44**
+
+This widget is shown on the scoreboard, to use it you will need to create your own item images and integrate them using basic lua knowledge.
+
+---
+
 ### Wunderfizz Requirements:
 
 Before you start, make sure both Electric Cherry and Widow's Wine are turned on in your map. To do this, add these two lines to your map's GSC and CSC files:
