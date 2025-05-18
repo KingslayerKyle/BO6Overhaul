@@ -495,6 +495,8 @@ function drop_item_by_type_to_location(drop_type, v_from, v_to)
             new_origin += (0, 0, 2);
             new_angles += (0, 0, 0);
             break;
+        default:
+            break;
     }
 
     ent = [[drop_type.on_spawn_item_model_func]](drop_type, v_from, new_angles);
