@@ -676,8 +676,19 @@ function on_ammo_picked_up(drop_type, player)
         return false;
 
     stock_max = current_weapon.maxammo;
+
+    if(!isdefined(stock_max))
+        return false;
+
     stock_ammo = player getweaponammostock(current_weapon);
+
+    if(!isdefined(stock_ammo))
+        return false;
+
     ammo_to_add = int(ceil(stock_max / 3));
+
+    if(!isdefined(ammo_to_add) || ammo_to_add < 1)
+        return false;
 
     player setweaponammostock(current_weapon, math::clamp(stock_ammo + ammo_to_add, 0, stock_max));
     
