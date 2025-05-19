@@ -30,6 +30,12 @@ Download from the GitHub release:
 
 ---
 
+## 🤝 Installation Guidance
+
+**Note:** The order of the #using statements does not affect functionality. They are simply organized into sections (e.g., shared scripts, zombies mode scripts) for better readability and maintainability. You can add the required #using anywhere in the list, regardless of its position—just place it in the section that makes the most sense for your organization.
+
+---
+
 ## 🛠️ Installation
 
 ### 1. Root Files (Assets)
@@ -148,8 +154,6 @@ These perks are set to show up in the menu by default. If a perk is in the menu 
 
 **The Wunderfizz machine and all stock perk machines include perk change support.**
 To enable this functionality, you must manually activate it by calling the perk change script. If you haven’t already done so, complete the steps below.
-
-**Note:** The order of the #using statements does not affect functionality. They are simply organized into sections (e.g., shared scripts, zombies mode scripts) for better readability and maintainability. You can add the required #using anywhere in the list, regardless of its position—just place it in the section that makes the most sense for your organization.
 
 To enable it, add the following to the top of your map's `.gsc` file:
 
