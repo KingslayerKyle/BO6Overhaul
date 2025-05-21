@@ -277,7 +277,7 @@ CoD.T10Scoreboard.new = function ( menu, controller )
 	self.SelfScoreText:setRGB( 0.85, 0.79, 0.70 )
 	self.SelfScoreText:setScale( 0.5 )
 	self.SelfScoreText:setAlignment( Enum.LUIAlignment.LUI_ALIGNMENT_LEFT )
-	self.SelfScoreText:subscribeToModel( Engine.GetModel( Engine.GetModelForController( controller ), "PlayerList." .. Engine.GetClientNum( controller ) .. ".playerScore" ), function ( model )
+	self.SelfScoreText:subscribeToModel( Engine.GetModel( Engine.GetModelForController( controller ), "PlayerList." .. Engine.GetClientNum( 0 ) .. ".playerScore" ), function ( model )
 		local score = Engine.GetModelValue( model )
 
 		if score then

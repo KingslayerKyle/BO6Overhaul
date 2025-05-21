@@ -2,7 +2,7 @@ require( "ui.uieditor.widgets.T10BuyablePerk.T10BuyablePerkButton1ListItem" )
 
 local SetHeaderLabels = function ( self, controller )
 	local controllerModel = Engine.GetModelForController( controller )
-	local clientNum = Engine.GetClientNum( controller )
+	local clientNum = Engine.GetClientNum( 0 )
 	local buttonListModel = self.buttonList:getModel()
 
 	local nameModel = Engine.GetModel( buttonListModel, "name" )
@@ -64,7 +64,7 @@ local PostLoadFunc = function ( self, controller )
 
 	local controllerModel = Engine.GetModelForController( controller )
 	local perksModel = Engine.GetModel( controllerModel, "hudItems.perks" )
-	local scoreModel = Engine.GetModel( controllerModel, "PlayerList." .. Engine.GetClientNum( controller ) .. ".playerScore" )
+	local scoreModel = Engine.GetModel( controllerModel, "PlayerList." .. Engine.GetClientNum( 0 ) .. ".playerScore" )
 	local scoreboardTeamCountModel = Engine.GetModel( Engine.GetGlobalModel(), "scoreboard.team1.count" )
 
 	if CoD.ZMPerks ~= nil then
@@ -91,7 +91,7 @@ DataSources.T10BuyablePerk = ListHelper_SetupDataSource( "T10BuyablePerk", funct
 
 	local controllerModel = Engine.GetModelForController( controller )
 	local perksModel = Engine.GetModel( controllerModel, "hudItems.perks" )
-	local scoreModel = Engine.GetModel( Engine.GetModelForController( controller ), "PlayerList." .. Engine.GetClientNum( controller ) .. ".playerScore" )
+	local scoreModel = Engine.GetModel( controllerModel, "PlayerList." .. Engine.GetClientNum( 0 ) .. ".playerScore" )
 	local scoreboardTeamCountModel = Engine.GetModel( Engine.GetGlobalModel(), "scoreboard.team1.count" )
 	local score = Engine.GetModelValue( scoreModel )
 	local scoreboardTeamCount = Engine.GetModelValue( scoreboardTeamCountModel )
