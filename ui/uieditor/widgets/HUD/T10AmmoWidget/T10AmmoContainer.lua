@@ -10,7 +10,7 @@ local SetWeaponName = function ( controller, element )
 
 	if weaponName ~= nil and muleKick ~= nil then
 		if muleKick == 1 then
-			element:setText( Engine.Localize( weaponName .. " (MK)" ) )
+			element:setText( Engine.Localize( weaponName ) .. " (MK)" )
 		else
 			element:setText( Engine.Localize( weaponName ) )
 		end

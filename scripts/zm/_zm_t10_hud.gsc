@@ -349,7 +349,7 @@ function set_mule_kick_clientfield()
 
 		if( primary_weapons.size > 2 )
 		{
-			last_weapon = primary_weapons[primary_weapons.size];
+			last_weapon = primary_weapons[primary_weapons.size - 1];
 
 			if( IS_EQUAL( last_weapon, weapon ) )
 			{
