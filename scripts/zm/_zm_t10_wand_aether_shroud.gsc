@@ -164,6 +164,9 @@ function aether_shroud_deactivate()
 
 	// Make zombies NOT ignore the player
 	self zm_utility::decrement_ignoreme();
+
+	// Set hero weapon state back to charging
+	self zm_hero_weapon::set_hero_weapon_state( undefined, 1 );
 }
 
 function aether_shroud_ignoreme_monitor()
